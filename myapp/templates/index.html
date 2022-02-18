@@ -1,7 +1,6 @@
 {% load static %}
 <!doctype html>
 <html class="no-js" lang="en">
-sahil snwhxgnhws
 <head>
     <meta charset="utf-8">
 
@@ -12,11 +11,11 @@ sahil snwhxgnhws
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="static/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="{% static/images/favicon.png" type="image/png">
 
     <!--====== Nice Select CSS ======-->
     <link rel="stylesheet" href="static/css/nice-select.css">
-
+he
     <!--====== Font Awesome CSS ======-->
     <link rel="stylesheet" href="static/css/all.min.css">
 
@@ -74,7 +73,7 @@ sahil snwhxgnhws
                     <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                         <ul class="navbar-nav m-auto">
                             <li>
-                                <a class="active" href="index.html">Home <span class="line"></span></a>
+                                <a class="active" href="{% url 'index' %}">Home <span class="line"></span></a>
                             </li>
                             <li>
                                 <a href="categories.html">Categories <span class="line"></span></a>
@@ -83,7 +82,7 @@ sahil snwhxgnhws
                                 <a href="#">Pages <i class="fa fa-angle-down"></i> <span class="line"></span></a>
 
                                 <ul class="sub-menu">
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
                                     <li><a href="product.html">Listing</a></li>
                                     <li><a href="product-details.html">Product Details</a></li>
                                     <li><a href="error-404.html">404</a></li>
@@ -100,7 +99,7 @@ sahil snwhxgnhws
                                     <li><a href="blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{% url 'contact'%}">Contact <span class="line"></span></a></li>
+                            <li><a href="{% url 'contact' %}">Contact <span class="line"></span></a></li>
                         </ul>
                     </div>
 
