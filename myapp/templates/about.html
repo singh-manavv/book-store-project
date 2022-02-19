@@ -131,7 +131,7 @@
             </div>
         </div>
 
-        <div class="page_banner bg_cover" style="background-image: url(static/images/page-banner.jpg)">
+        <div class="page_banner bg_cover" style="background-image: {% static 'images/page-banner.jpg' %}">
             <div class="container">
                 <div class="page_banner_content">
                     <h3 class="title">About</h3>
@@ -152,7 +152,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4">
-                    <div class="about_image bg_cover mt-50" style="background-image: url(static/images/about-image.jpg)"></div>
+                    <div class="about_image bg_cover mt-50" style="background-image: {% static 'images/about-image.jpg' %}"></div>
                 </div>
                 <div class="col-lg-8">
                     <div class="about_content mt-40">
@@ -160,7 +160,7 @@
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam. et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. <br> <br>  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata. </p>
                         <div class="signechar">
                             <h6 class="name">John Smith Doe</h6>
-                            <img src="static/images/signechar.png" alt="signechar">
+                            <img src="{% static 'images/signechar.png' %}" alt="signechar">
                         </div>
                     </div>
                 </div>
@@ -284,14 +284,14 @@
                 <div class="col-lg-6">
                     <div class="about_image_2 mt-50">
                         <div class="image_1">
-                            <img src="static/images/about-image-1.jpg" alt="About">
+                            <img src="{% static 'images/about-image-1.jpg' %}" alt="About">
                         </div>
                         <div class="image_2">
                             <div class="about_counter">
                                 <span class="count"><span class="counter">5,700</span>+</span>
                                 <p>Verified Seller</p>
                             </div>
-                            <img src="static/images/about-image-2.jpg" alt="About">
+                            <img src="{% static 'images/about-image-2.jpg' %}" alt="About">
                         </div>
                     </div>
                 </div>
@@ -303,7 +303,7 @@
     
     <!--====== COUNETR PART START ======-->
 
-    <section class="counter_area bg_cover" style="background-image: url(static/images/counter-bg.jpg)">
+    <section class="counter_area bg_cover" style="background-image: {% static 'images/counter-bg.jpg' %}">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-lg-9">
@@ -311,7 +311,7 @@
                         <div class="single_counter">
                             <div class="counter_items d-flex">
                                 <div class="counter_icon">
-                                    <img src="static/images/icon/counter-1.svg" alt="counter">
+                                    <img src="{% static 'images/icon/counter-1.svg' %}" alt="counter">
                                 </div>
                                 <div class="counter_count media-body">
                                     <span class="count"><span class="counter">5000</span>+</span>
@@ -322,7 +322,7 @@
                         <div class="single_counter">
                             <div class="counter_items d-flex">
                                 <div class="counter_icon">
-                                    <img src="static/images/icon/counter-2.svg" alt="counter">
+                                    <img src="{% static 'images/icon/counter-2.svg' %}" alt="counter">
                                 </div>
                                 <div class="counter_count media-body">
                                     <span class="count"><span class="counter">300</span>+</span>
