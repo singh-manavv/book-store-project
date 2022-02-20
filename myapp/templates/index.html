@@ -3,8 +3,29 @@
 {% block content %}
 <!doctype html>
 <html class="no-js" lang="en">
+
 <head>
-        <div class="header_content bg_cover" style="background-image: {% static 'images/hero.jpg'%}">
+    <meta charset="utf-8">
+
+    <!--====== Title ======-->
+    <title>Home | ClassiFied</title>
+
+    <meta name="description" content="">
+
+
+</head>
+
+<body class="gray-bg">
+
+
+
+    <!--====== HEADER PART START ======-->
+
+    <header class="header_area">
+
+       
+
+        <div class="header_content bg_cover" style="background-image: url({% static 'images/hero.jpg' %})">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10">
@@ -68,7 +89,7 @@
             </div>
         </div>
     </header>
-</head>
+
     <!--====== HEADER PART ENDS ======-->
 
     <!--====== CATEGORY PART START ======-->
@@ -233,7 +254,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-1.png" alt="ads">
+                                        <img src="{% static "images/ads-1.png" %}" alt="ads">
                                     </div>
                                     <div class="ads_card_content">
                                         <div class="meta d-flex justify-content-between">
@@ -252,7 +273,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-2.png" alt="ads">
+                                        <img src="{% static 'images/ads-2.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -272,7 +293,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-3.png" alt="ads">
+                                        <img src="{% static 'images/ads-3.png' %}" alt="ads">
                                     </div>
                                     <div class="ads_card_content">
                                         <div class="meta d-flex justify-content-between">
@@ -291,7 +312,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-4.png" alt="ads">
+                                        <img src="{% static 'images/ads-4.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -311,7 +332,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-5.png" alt="ads">
+                                        <img src="{% static 'images/ads-5.png' %}" alt="ads">
                                     </div>
                                     <div class="ads_card_content">
                                         <div class="meta d-flex justify-content-between">
@@ -330,7 +351,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-6.png" alt="ads">
+                                        <img src="{% static 'images/ads-6.png' %}" alt="ads">
                                     </div>
                                     <div class="ads_card_content">
                                         <div class="meta d-flex justify-content-between">
@@ -349,7 +370,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-7.png" alt="ads">
+                                        <img src="{% static 'images/ads-7.png' %}" alt="ads">
                                     </div>
                                     <div class="ads_card_content">
                                         <div class="meta d-flex justify-content-between">
@@ -368,7 +389,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-8.png" alt="ads">
+                                        <img src="{% static 'images/ads-8.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -392,7 +413,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-1.png" alt="ads">
+                                        <img src="{% static 'images/ads-1.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -412,7 +433,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-2.png" alt="ads">
+                                        <img src="{% static 'images/ads-2.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -432,7 +453,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-3.png" alt="ads">
+                                        <img src="{% static 'images/ads-3.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -452,7 +473,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-4.png" alt="ads">
+                                        <img src="{% static 'images/ads-4.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -472,7 +493,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-5.png" alt="ads">
+                                        <img src="{% static 'images/ads-5.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -492,7 +513,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-6.png" alt="ads">
+                                        <img src="{% static 'images/ads-6.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -512,7 +533,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-7.png" alt="ads">
+                                        <img src="{% static 'images/ads-7.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -532,7 +553,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single_ads_card mt-30">
                                     <div class="ads_card_image">
-                                        <img src="static/images/ads-8.png" alt="ads">
+                                        <img src="{% static 'images/ads-8.png' %}" alt="ads">
                                         <p class="sticker">Featured</p>
                                     </div>
                                     <div class="ads_card_content">
@@ -582,7 +603,7 @@
         </div>
         <div class="choose_image">
             <div class="image">
-                <img src="static/images/choose.png" alt="choose">
+                <img src="{% static 'images/choose.png' %}" alt="choose">
             </div>
         </div>
     </section>
@@ -605,7 +626,7 @@
                     <div class="col-lg-4 col-md-7 col-sm-8">
                         <div class="single_locations mt-30">
                             <div class="locations_image">
-                                <img src="static/images/locations-1.jpg" alt="Locations">
+                                <img src="{% static 'images/locations-1.jpg' %}" alt="Locations">
                             </div>
                             <div class="locations_content">
                                 <h5 class="title"><a href="product.html"><i class="far fa-map"></i>Los Angeles</a></h5>
@@ -617,7 +638,7 @@
                     <div class="col-lg-4 col-md-7 col-sm-8">
                         <div class="single_locations mt-30">
                             <div class="locations_image">
-                                <img src="static/images/locations-2.jpg" alt="Locations">
+                                <img src="{% static 'images/locations-2.jpg' %}" alt="Locations">
                             </div>
                             <div class="locations_content">
                                 <h5 class="title"><a href="product.html"><i class="far fa-map"></i>California</a></h5>
@@ -629,7 +650,7 @@
                     <div class="col-lg-4 col-md-7 col-sm-8">
                         <div class="single_locations mt-30">
                             <div class="locations_image">
-                                <img src="static/images/locations-3.jpg" alt="Locations">
+                                <img src="{% static 'images/locations-3.jpg' %}" alt="Locations">
                             </div>
                             <div class="locations_content">
                                 <h5 class="title"><a href="product.html"><i class="far fa-map"></i>New York</a></h5>
@@ -650,7 +671,7 @@
 
     <!--====== COUNETR PART START ======-->
 
-    <section class="counter_area bg_cover" style="background-image: url(static/images/counter-bg.jpg)">
+    <section class="counter_area bg_cover" style="background-image: url({% static 'images/counter-bg.jpg' %})">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-lg-9">
@@ -658,7 +679,7 @@
                         <div class="single_counter">
                             <div class="counter_items d-flex">
                                 <div class="counter_icon">
-                                    <img src="static/images/icon/counter-1.svg" alt="counter">
+                                    <img src="{% static 'images/icon/counter-1.svg' %}" alt="counter">
                                 </div>
                                 <div class="counter_count media-body">
                                     <span class="count"><span class="counter">5000</span>+</span>
@@ -669,7 +690,7 @@
                         <div class="single_counter">
                             <div class="counter_items d-flex">
                                 <div class="counter_icon">
-                                    <img src="static/images/icon/counter-2.svg" alt="counter">
+                                    <img src="{% static 'images/icon/counter-2.svg' %}" alt="counter">
                                 </div>
                                 <div class="counter_count media-body">
                                     <span class="count"><span class="counter">300</span>+</span>
@@ -680,7 +701,7 @@
                         <div class="single_counter">
                             <div class="counter_items d-flex">
                                 <div class="counter_icon">
-                                    <img src="static/images/icon/counter-3.svg" alt="counter">
+                                    <img src="{% static 'images/icon/counter-3.svg' %}" alt="counter">
                                 </div>
                                 <div class="counter_count media-body">
                                     <span class="count"><span class="counter">200</span>+</span>
@@ -712,7 +733,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single_ads_card mt-30">
                             <div class="ads_card_image">
-                                <img src="static/images/ads-1.png" alt="ads">
+                                <img src="{% static 'images/ads-1.png' %}" alt="ads">
                             </div>
                             <div class="ads_card_content">
                                 <div class="meta d-flex justify-content-between">
@@ -731,7 +752,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single_ads_card mt-30">
                             <div class="ads_card_image">
-                                <img src="static/images/ads-2.png" alt="ads">
+                                <img src="{% static 'images/ads-2.png' %}" alt="ads">
                                 <p class="sticker sticker_color-1">New</p>
                             </div>
                             <div class="ads_card_content">
@@ -751,7 +772,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single_ads_card mt-30">
                             <div class="ads_card_image">
-                                <img src="static/images/ads-3.png" alt="ads">
+                                <img src="{% static 'images/ads-3.png' %}" alt="ads">
                             </div>
                             <div class="ads_card_content">
                                 <div class="meta d-flex justify-content-between">
@@ -770,7 +791,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single_ads_card mt-30">
                             <div class="ads_card_image">
-                                <img src="static/images/ads-4.png" alt="ads">
+                                <img src="{% static 'images/ads-4.png' %}" alt="ads">
                             </div>
                             <div class="ads_card_content">
                                 <div class="meta d-flex justify-content-between">
@@ -847,7 +868,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="single_ads_card mt-30">
                             <div class="ads_card_image">
-                                <img src="static/images/ads-8.png" alt="ads">
+                                <img src="{% static 'images/ads-8.png' %}" alt="ads">
                             </div>
                             <div class="ads_card_content">
                                 <div class="meta d-flex justify-content-between">
@@ -1061,7 +1082,22 @@
 
     <!--====== CALL TO ACTION PART ENDS ======-->
 
-    
+
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 
