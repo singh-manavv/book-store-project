@@ -1,4 +1,6 @@
+{% extends 'header.html' %}
 {% load static %}
+{%block content%}
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -34,7 +36,7 @@
 <body class="gray-bg">
     
     <!--====== PRELOADER PART START ======-->
-
+<!-- 
     <div class="preloader">
         <div class="loader">
             <div class="ytp-spinner">
@@ -50,12 +52,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--====== PRELOADER PART ENDS ======-->
 
     <!--====== HEADER PART START ======-->
-
+<!-- 
     <header class="header_area">
 
         <div class="header_navbar">
@@ -130,8 +132,9 @@
                 </nav>
             </div>
         </div>
+    </header>
 
-        <div class="page_banner bg_cover" style="background-image: url(static/images/page-banner.jpg)">
+         <div class="page_banner bg_cover" style="background-image: url(static/images/page-banner.jpg)">
             <div class="container">
                 <div class="page_banner_content">
                     <h3 class="title">Contact Us</h3>
@@ -142,11 +145,21 @@
                 </div>
             </div>
         </div>
-    </header>
 
     <!--====== HEADER PART ENDS ======-->
     
     <!--====== CONTACT PART START ======-->
+    <div class="page_banner bg_cover" style="background-image: url(static/images/page-banner.jpg)">
+        <div class="container">
+            <div class="page_banner_content">
+                <h3 class="title">Contact Us</h3>
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <section class="contact_page pt-120 pb-120">
         <div class="container">
@@ -267,7 +280,7 @@
 
     <!--====== FOOTER PART START ======-->
 
-    <footer class="footer_area">
+    <!-- <footer class="footer_area">
         <div class="footer_widget pt-70 pb-120">
             <div class="container">
                 <div class="row">
@@ -339,7 +352,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <!--====== FOOTER PART ENDS ======-->
 
@@ -407,3 +420,4 @@
 </body>
 
 </html>
+{% endblock %}
