@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -143,8 +144,8 @@
         </head>
     </header>
     <!--====== FOOTER PART START ======-->
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
     <footer class="footer_area">
         <div class="footer_widget pt-70 pb-120">
             <div class="container">
@@ -208,10 +209,14 @@
                     </div>
                     <div class="payment mt-15">
                         <ul>
-                            <li><a href="#"><img src="{% static 'images/icon/payment-method1.jpg' %}" alt="payment"></a></li>
-                            <li><a href="#"><img src="{% static 'images/icon/payment-method2.jpg' %}" alt="payment"></a></li>
-                            <li><a href="#"><img src="{% static 'images/icon/payment-method3.jpg' %}" alt="payment"></a></li>
-                            <li><a href="#"><img src="{% static 'images/icon/payment-method4.jpg' %}" alt="payment"></a></li>
+                            <li><a href="#"><img src="{% static 'images/icon/payment-method1.jpg' %}" alt="payment"></a>
+                            </li>
+                            <li><a href="#"><img src="{% static 'images/icon/payment-method2.jpg' %}" alt="payment"></a>
+                            </li>
+                            <li><a href="#"><img src="{% static 'images/icon/payment-method3.jpg' %}" alt="payment"></a>
+                            </li>
+                            <li><a href="#"><img src="{% static 'images/icon/payment-method4.jpg' %}" alt="payment"></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
