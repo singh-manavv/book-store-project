@@ -15,3 +15,6 @@ def signup(request):
 
 def signin(request):
     return render(request,'signin.html')
+
+def categories(request):
+    return render(request,'categories.html')

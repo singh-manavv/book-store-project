@@ -1,4 +1,4 @@
-{% extends 'header.html' %}
+{% extends 'buyer_header.html' %}
 {% load static %}
 {%block content%}
 <!doctype html>
@@ -35,7 +35,7 @@
 
 <body class="gray-bg">
     
-    <!--====== PRELOADER PART START ======-->
+    {% comment %} <!--====== PRELOADER PART START ======-->
 <!-- 
     <div class="preloader">
         <div class="loader">
@@ -132,9 +132,9 @@
                 </nav>
             </div>
         </div>
-    </header>
+    </header> {% endcomment %}
 
-         <div class="page_banner bg_cover" style="background-image: url(static/images/page-banner.jpg)">
+         {% comment %} <div class="page_banner bg_cover" style="background-image: url(static/images/page-banner.jpg)">
             <div class="container">
                 <div class="page_banner_content">
                     <h3 class="title">Contact Us</h3>
@@ -147,7 +147,7 @@
         </div>
 
     <!--====== HEADER PART ENDS ======-->
-    
+     {% endcomment %}
     <!--====== CONTACT PART START ======-->
     <div class="page_banner bg_cover" style="background-image: url(static/images/page-banner.jpg)">
         <div class="container">
