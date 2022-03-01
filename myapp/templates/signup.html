@@ -63,7 +63,14 @@
                         <div class="contact_title">
                             <h5 class="title">SIGN UP HERE </h5>
                         </div>
-                        <form id="contact-form" action="static/contact.php" method="post">
+                        {% if msg %}
+                          {{msg}}
+                        {% endif %}
+                        <form action="{% url 'signup' %}" method="post">
+                            {% csrf_token %}
+                            <br>
+                            <input type="radio" name="0" > Buyer </input>
+                            <input type="radio" name="0" Style="padding: 5px margin: 3px "> Seller </input>
                             <div class="contact_form_wrapper">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -86,19 +93,19 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="single_form">
-                                            <input type="tel" name="mobile" placeholder="Mobile" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                                            <input type="tel" name="mobile" placeholder="Mobile">
                                             <i class="fa fa-phone"></i>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="single_form">
-                                            <input type="password" name="pass" placeholder="password">
+                                            <input type="password" name="password" placeholder="password">
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="single_form">
-                                            <input type="password" name="cpass" placeholder="confirm password">
+                                            <input type="password" name="cpassword" placeholder="confirm password">
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
@@ -110,14 +117,13 @@
                                     </div> -->
                                     <div class="col-md-12">
                                         <div class="single_form">
-                                            <textarea name="message" placeholder="Location- Enter house no. , street/locality, area ,city, pincode  "></textarea>
+                                            <textarea name="address" placeholder="Location- Enter house no. , street/locality, area ,city, pincode  "></textarea>
                                             <i class="fas fa-search-location"></i>
                                         </div>
                                     </div>
-                                    <p class="form-message"></p>
                                     <div class="col-md-12">
                                         <div class="single_form">
-                                            <button class="main-btn" type="submit">Submit</button>
+                                            <input class="main-btn" name="action"  type="submit" value="submit">
                                         </div>
                                     </div>
                                 </div>
