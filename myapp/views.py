@@ -1,7 +1,7 @@
 import email
 from django.forms import PasswordInput
 from django.shortcuts import render
-from .models import Contact, User
+from .models import *
 
 # Create your views here.
 
@@ -40,6 +40,7 @@ def signup(request):
             if request.POST['password']==request.POST['cpassword']:
                 
                 User.objects.create(
+                    usertype=request.POST['usertype'],
                     fname=request.POST['fname'],
                     lname=request.POST['lname'],
                     email=request.POST['email'],
@@ -61,16 +62,22 @@ def signup(request):
 def signin(request):
     if request.method=="POST":
         try:
-            User.objects.get(
+            user=User.objects.get(
                 email=request.POST['email'],
                 password=request.method['password']
             )
-            msg="Login Successfully"
-            return render(request,'index.html',{'msg':msg})
-
+            if user.usertype=="user":
+                request.session['fname']=user.fname
+                request.session['email']=user.email
+                return render(request,'index.html')
+            
+            elif user.usertype=="seller":
+                request.session['fname']=user.fname
+                request.session['email']=user.email
+                return render(request,'index.html')
         except:
 
-            msg="Password & Confirm Password Does Not Matched"
+            msg="Email and Password Does Not Matched"
             return render(request, 'signin.html',{'msg':msg})
     else:
         return render(request, 'signin.html')
@@ -78,3 +85,14 @@ def signin(request):
 
 def categories(request):
     return render(request, 'categories.html')
+
+
+def signout(request):
+    try:
+        del request.session['fname']
+        del request.session['email']
+        return render(request, 'signin.html')
+    except:
+        return render(request, 'signin.html')
+
+

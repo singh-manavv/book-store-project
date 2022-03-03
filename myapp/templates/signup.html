@@ -63,14 +63,15 @@
                         <div class="contact_title">
                             <h5 class="title">SIGN UP HERE </h5>
                         </div>
+                        <br>
                         {% if msg %}
                           {{msg}}
                         {% endif %}
                         <form action="{% url 'signup' %}" method="post">
-                            {% csrf_token %}
+                        {% csrf_token %}
                             <br>
-                            <input type="radio" name="0" > Buyer </input>
-                            <input type="radio" name="0" Style="padding: 5px margin: 3px "> Seller </input>
+                            <input type="radio" name="usertype" value="user" > Buyer </input>
+                            <input type="radio" name="usertype" value="seller" Style="padding: 5px; margin: 3px"> Seller </input>
                             <div class="contact_form_wrapper">
                                 <div class="row">
                                     <div class="col-md-6">

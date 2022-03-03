@@ -63,9 +63,11 @@
                         <div class="contact_title">
                             <h5 class="title">SIGN IN HERE </h5>
                         </div>
+                        <br>
                         {% if msg %}    
                           {{msg}}
                         {% endif %}
+                        <br>
                         <form action="{% url 'signin' %}" method="post">
                             {% csrf_token %}
                             <div class="contact_form_wrapper">

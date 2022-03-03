@@ -93,8 +93,6 @@
                                     <li><a href="error-404.html">404</a></li>
                                     <li><a href="faq.html">FAQ</a></li>
                                     <li><a href="pricing.html">Pricing</a></li>
-                                    <li><a href="{% url 'signin' %}">Sign In</a></li>
-                                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
                                 </ul>
                             </li>
 
@@ -108,9 +106,10 @@
                             <li>
                                 <a class="active" href="{% url 'signup' %}">Become Seller <span class="line"></span></a>
                             </li>
+                            
                         </ul>
                     </div>
-
+                    <br><br>
                     <div class="navbar_btn">
                         <ul>
                             <li>
@@ -131,7 +130,18 @@
                                                     Favourites</a></li>
                                             <li><a href="privacy-setting.html"><i class="fas fa-star"></i> Privacy
                                                     Settings</a></li>
-                                            <li><a href="#"><i class="fas fa-sign-out"></i> Sign Out</a></li>
+                                            {% if request.session.email %}
+                                            
+                                                <li><a href="{% url 'signout' %}"><i class="fas fa-sign-out"></i> Sign Out</a></li>
+
+                                                
+                                            {% else %}
+
+                                                <li><a href="{% url 'signin' %}">Sign In</a></li>
+                                                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                                            
+                                            {% endif %}
+                                            
                                         </ul>
                                     </div>
                                 </div>

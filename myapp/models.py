@@ -23,6 +23,7 @@ class User(models.Model):
     password = models.CharField(max_length=100)
     cpassword = models.CharField(max_length=100)
     address = models.TextField()
+    usertype=models.CharField(max_length=100,default="user")
 
     def __str__(self):
-        return self.fname+" - "+self.email
+        return self.fname+" - "+self.usertype
