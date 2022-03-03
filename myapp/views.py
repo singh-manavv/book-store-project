@@ -1,4 +1,5 @@
 import email
+from django.forms import PasswordInput
 from django.shortcuts import render
 from .models import Contact, User
 
@@ -58,7 +59,21 @@ def signup(request):
 
 
 def signin(request):
-    return render(request, 'signin.html')
+    if request.method=="POST":
+        try:
+            User.objects.get(
+                email=request.POST['email'],
+                password=request.method['password']
+            )
+            msg="Login Successfully"
+            return render(request,'index.html',{'msg':msg})
+
+        except:
+
+            msg="Password & Confirm Password Does Not Matched"
+            return render(request, 'signin.html',{'msg':msg})
+    else:
+        return render(request, 'signin.html')
 
 
 def categories(request):
