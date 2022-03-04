@@ -1,3 +1,4 @@
+from asyncio.log import logger
 import email
 from django.forms import PasswordInput
 from django.shortcuts import render
@@ -64,7 +65,11 @@ def signin(request):
         try:
             user=User.objects.get(
                 email=request.POST['email'],
+<<<<<<< HEAD
                 password=request.POST['password']
+=======
+                password=request.POST['pass']
+>>>>>>> cd0923d998c4d97a1477706563f72fde971e5673
             )
             if user.usertype == "user":
                 request.session['fname']=user.fname
@@ -73,11 +78,18 @@ def signin(request):
             elif user.usertype == "seller":
                 request.session['fname']=user.fname
                 request.session['email']=user.email
+<<<<<<< HEAD
                 return render(request,'upload_book.html')
 
         except:
             msg="Email or Password are Incorrect"
             return render(request,'signin.html',{'msg':msg})
+=======
+                return render(request,'index.html')
+        except :
+            msg="Email and Password Does Not Matched"
+            return render(request, 'signin.html',{'msg':msg})
+>>>>>>> cd0923d998c4d97a1477706563f72fde971e5673
     else:
         return render(request,'signin.html')
 
