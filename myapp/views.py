@@ -1,3 +1,4 @@
+from asyncio.log import logger
 import email
 from django.forms import PasswordInput
 from django.shortcuts import render
@@ -64,7 +65,7 @@ def signin(request):
         try:
             user=User.objects.get(
                 email=request.POST['email'],
-                password=request.method['password']
+                password=request.POST['pass']
             )
             if user.usertype=="user":
                 request.session['fname']=user.fname
@@ -75,8 +76,7 @@ def signin(request):
                 request.session['fname']=user.fname
                 request.session['email']=user.email
                 return render(request,'index.html')
-        except:
-
+        except :
             msg="Email and Password Does Not Matched"
             return render(request, 'signin.html',{'msg':msg})
     else:
