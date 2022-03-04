@@ -42,7 +42,7 @@
         <div class="header_navbar">
             <div class="container">
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="{% url 'index'%}">
+                    <a class="navbar-brand" href="{% url 'upload_book'%}">
                         <img src="{% static 'images/logo.png' %}" alt="logo">
                     </a>
 
@@ -56,34 +56,13 @@
 
                     <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                         <ul class="navbar-nav m-auto">
+                            <li><a href="#">Manage Book <span class="line"></span></a></li>
                             <li>
-                                <a class="active" href="{% url 'index' %}">Home <span class="line"></span></a>
-                            </li>
-                            <li>
-                                <a href="categories.html">Categories <span class="line"></span></a>
-                            </li>
-                            <li>
-                                <a href="#">Pages <i class="fa fa-angle-down"></i> <span class="line"></span></a>
-
-                                <ul class="sub-menu">
-                                    <li><a href="{% url 'about' %}">About</a></li>
-                                    <li><a href="product.html">Listing</a></li>
-                                    <li><a href="product-details.html">Product Details</a></li>
-                                    <li><a href="error-404.html">404</a></li>
-                                    <li><a href="faq.html">FAQ</a></li>
-                                    <li><a href="pricing.html">Pricing</a></li>
-                                    <li><a href="{% url 'signin' %}">Sign In</a></li>
-                                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                                </ul>
+                                <a class="active" href="{% url 'upload_book' %}">Add Book<span class="line"></span></a>
                             </li>
 
-                            <!-- <li><a href="#">Blog <i class="fa fa-angle-down"></i> <span class="line"></span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li> -->
-                            <li><a href="{% url 'contact' %}">Contact <span class="line"></span></a></li>
+                            <li><a href="#">Get Help <span class="line"></span></a></li>
+                           
                         </ul>
                     </div>
 
@@ -112,7 +91,6 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- <li><a class="sign-up" href="post-ads.html">Post Ads</a></li> -->
                         </ul>
                     </div>
                 </nav>
@@ -145,7 +123,7 @@
                         <div class="footer_link mt-45">
                             <h5 class="footer_title">How to Sell Fast</h5>
                             <ul class="link">
-                                <li><a href="#">Selling TIps</a></li>
+                                <li><a href="#">Selling Tips</a></li>
                                 <li><a href="#">Buy and Sell Quickly</a></li>
                                 <li><a href="#">Membership</a></li>
                                 <li><a href="#">Banner Advertising</a></li>
@@ -208,32 +186,6 @@
     <!--====== BACK TOP TOP PART START ======-->
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-
-    <!--====== BACK TOP TOP PART ENDS ======-->
-
-    <!--====== PART START ======-->
-
-    <!--
-    <section class="">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-">
-                    
-                </div>
-            </div>
-        </div>
-    </section>
--->
-
-    <!--====== PART ENDS ======-->
-
-
-
-
-
-
-
-
 
 
     <!--====== Jquery js ======-->

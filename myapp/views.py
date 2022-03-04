@@ -30,15 +30,15 @@ def about(request):
 
 
 def signup(request):
-    if request.method=="POST":
+    if request.method == "POST":
         try:
             User.objects.get(email=request.POST['email'])
-            msg="Emial Already Registered"
-            return render(request,'signup.html',{'msg':msg})
+            msg = "Email Already Registered"
+            return render(request, 'signup.html', {'msg': msg})
 
         except:
-            if request.POST['password']==request.POST['cpassword']:
-                
+            if request.POST['password'] == request.POST['cpassword']:
+
                 User.objects.create(
                     usertype=request.POST['usertype'],
                     fname=request.POST['fname'],
@@ -48,13 +48,13 @@ def signup(request):
                     password=request.POST['password'],
                     cpassword=request.POST['cpassword'],
                     address=request.POST['address']
-                    )
-                msg="User Signup Successfully"
+                )
+                msg = "User Signup Successfully"
                 print(msg)
-                return render(request, 'signin.html',{'msg':msg})
+                return render(request, 'signin.html', {'msg': msg})
             else:
-                msg="Password & Confirm Password Does Not Matched"
-                return render(request, 'signup.html',{'msg':msg})
+                msg = "Password & Confirm Password Does Not Matched"
+                return render(request, 'signup.html', {'msg': msg})
     else:
         return render(request, 'signup.html')
 
@@ -64,35 +64,36 @@ def signin(request):
         try:
             user=User.objects.get(
                 email=request.POST['email'],
-                password=request.method['password']
+                password=request.POST['password']
             )
-            if user.usertype=="user":
+            if user.usertype == "user":
                 request.session['fname']=user.fname
                 request.session['email']=user.email
                 return render(request,'index.html')
-            
-            elif user.usertype=="seller":
+            elif user.usertype == "seller":
                 request.session['fname']=user.fname
                 request.session['email']=user.email
-                return render(request,'index.html')
+                return render(request,'upload_book.html')
+
         except:
-
-            msg="Email and Password Does Not Matched"
-            return render(request, 'signin.html',{'msg':msg})
+            msg="Email or Password are Incorrect"
+            return render(request,'signin.html',{'msg':msg})
     else:
-        return render(request, 'signin.html')
-
-
-def categories(request):
-    return render(request, 'categories.html')
+        return render(request,'signin.html')
 
 
 def signout(request):
     try:
         del request.session['fname']
         del request.session['email']
-        return render(request, 'signin.html')
+        return render(request,'signin.html')
     except:
-        return render(request, 'signin.html')
+        return render(request,'signin.html')
+    
+    
+def categories(request):
+    return render(request,'categories.html')
 
 
+def upload_book(request):
+    return render(request,'upload_book.html')

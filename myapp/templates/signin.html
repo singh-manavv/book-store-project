@@ -52,11 +52,7 @@
 
     <section class="contact_page pt-120 pb-120">
         <div class="container">
-            <!-- <div class="contact_map">
-                <div class="gmap_canvas">                            
-                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                </div>
-            </div> -->
+
             <div class="row">
                 <div class="col-lg-8">
                     <div class="contact_form mt-30">
@@ -64,8 +60,8 @@
                             <h5 class="title">SIGN IN HERE </h5>
                         </div>
                         <br>
-                        {% if msg %}    
-                          {{msg}}
+                        {% if msg %}
+                        {{msg}}
                         {% endif %}
                         <br>
                         <form action="{% url 'signin' %}" method="post">
@@ -82,21 +78,23 @@
 
                                     <div class="col-md-10">
                                         <div class="single_form">
-                                            <input type="password" name="pass" placeholder="Password">
+                                            <input type="password" name="password" placeholder="Password">
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
-                                    <div class="single_form">
-                                        <button class="main-btn" type="submit">Sign-In</button>
+                                    <div class="col-md-10">
+                                        <div class="single_form">
+                                            <input class="main-btn" name="action" value="SignIn" type="submit"></input>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                    </div>
-                    </form>
-                </div>
-            </div>
 
-        </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 

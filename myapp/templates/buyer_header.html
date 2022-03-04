@@ -5,7 +5,12 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <!--====== Title ======-->
     <title>Home | ClassiFied</title>
@@ -30,31 +35,12 @@
 
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+     <style>
+        .show{display: block!important;}
+    </style>
 </head>
 
 <body class="gray-bg">
-
-    <!--====== PRELOADER PART START ======-->
-
-    <!-- <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!--====== PRELOADER PART ENDS ======-->
 
     <!--====== HEADER PART START ======-->
 
@@ -83,30 +69,12 @@
                             <li>
                                 <a href="{% url 'categories' %}">Categories <span class="line"></span></a>
                             </li>
-                            <li>
-                                <a href="#">Pages <i class="fa fa-angle-down"></i> <span class="line"></span></a>
-
-                                <ul class="sub-menu">
-                                    <li><a href="{% url 'about' %}">About</a></li>
-                                    <li><a href="product.html">Listing</a></li>
-                                    <li><a href="product-details.html">Product Details</a></li>
-                                    <li><a href="error-404.html">404</a></li>
-                                    <li><a href="faq.html">FAQ</a></li>
-                                    <li><a href="pricing.html">Pricing</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- <li><a href="#">Blog <i class="fa fa-angle-down"></i> <span class="line"></span></a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li> -->
+                            <li><a href="{% url 'about' %}">About</a></li>
                             <li><a href="{% url 'contact' %}">Contact <span class="line"></span></a></li>
                             <li>
                                 <a class="active" href="{% url 'signup' %}">Become Seller <span class="line"></span></a>
                             </li>
-                            
+
                         </ul>
                     </div>
                     <br><br>
@@ -131,17 +99,18 @@
                                             <li><a href="privacy-setting.html"><i class="fas fa-star"></i> Privacy
                                                     Settings</a></li>
                                             {% if request.session.email %}
-                                            
-                                                <li><a href="{% url 'signout' %}"><i class="fas fa-sign-out"></i> Sign Out</a></li>
 
-                                                
+                                                <li><a href="{% url 'signout' %}"><i class="fas fa-sign-out"></i> Sign
+                                                    Out</a></li>
+
+
                                             {% else %}
 
                                                 <li><a href="{% url 'signin' %}">Sign In</a></li>
                                                 <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                                            
+
                                             {% endif %}
-                                            
+
                                         </ul>
                                     </div>
                                 </div>
@@ -300,7 +269,6 @@
     <!--====== Main js ======-->
     <script src="{% static 'js/main.js' %}"></script>
 </body>
-
 
 
 </html>

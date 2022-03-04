@@ -1,4 +1,4 @@
-{% extends 'buyer_header.html' %}
+{% extends 'seller_header.html' %}
 {% load static %}
 {%block content%}
 <!doctype html>
@@ -8,7 +8,7 @@
     <meta charset="utf-8">
 
     <!--====== Title ======-->
-    <title>Contact | ClassiFied</title>
+    <title>upload Here| ClassiFied</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,10 +39,10 @@
     <div class="page_banner bg_cover" style="background-image: url(static/images/page-banner.jpg)">
         <div class="container">
             <div class="page_banner_content">
-                <h3 class="title">Contact Us</h3>
+                <h3 class="title">Upload Here </h3>
                 <ul class="breadcrumb">
                     <li><a href="#">Home</a></li>
-                    <li>Contact Us</li>
+                    <li>Upload_Book</li>
                 </ul>
             </div>
         </div>
@@ -50,52 +50,52 @@
 
     <section class="contact_page pt-120 pb-120">
         <div class="container">
-            <div class="contact_map">
-                <div class="gmap_canvas">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9227269963385!2d72.50641281368877!3d23.026609284950926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9bcfc986bd65%3A0x34a20b9c5ddd6ca4!2sTOPS%20Technologies%20Ahmedabad%20-%20Digital%20Marketing%2C%20Graphic%20Design%2C%20Web%20Design%20%26%20Hardware%20%26%20Networking%20Training%20Courses!5e0!3m2!1sen!2sin!4v1646332801030!5m2!1sen!2sin"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="contact_form mt-30">
                         <div class="contact_title">
-                            <h5 class="title">Send Message Us </h5>
+                            <h5 class="title">Fill Details Here </h5>
                         </div>
                         <form id="contact-form" action="{% url 'contact'%}" method="post">
                             {% csrf_token %}
                             <div class="contact_form_wrapper">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="single_form">
-                                            <input type="text" name="name" placeholder="Name">
+                                            <input type="text" name="name" placeholder=" Book Name">
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    
+                                    <div class="col-md-12">
                                         <div class="single_form">
-                                            <input type="email" name="email" placeholder="Email">
-                                            <i class="fas fa-envelope"></i>
+                                            <select class="form-control form-control-lg"aria-label="Default select example">
+                                                <option selected>categories</option>
+                                                <option value="1">Novel</option>
+                                                <option value="2">Sci-Fi.</option>
+                                                <option value="3">Thriller.</option>
+                                                <option value="4">Historical Fiction.</option>
+                                                <option value="5">Physics</option>
+                                                <option value="6">biography</option>
+                                              </select>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="single_form">
-                                            <input type="text" name="subject" placeholder="Subject">
-                                            <i class="far fa-i-cursor"></i>
+                                            <label for="formFileDisabled" class="form-label">select book image</label>
+                                            <input class="form-control" type="file"/>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="single_form">
-                                            <textarea name="remarks" placeholder="Message"></textarea>
+                                            <textarea name="remarks" placeholder="description"></textarea>
                                             <i class="fas fa-edit"></i>
                                         </div>
                                     </div>
                                     <!-- <p class="form-message"></p> -->
                                     <div class="col-md-12">
                                         <div class="single_form">
-                                            <input class="main-btn" type="submit" name="action" value="submit">
+                                            <input class="main-btn" type="submit" name="action" value="Add Book">
                                         </div>
                                     </div>
                                 </div>
