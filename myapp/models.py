@@ -1,4 +1,5 @@
 from email import message
+from unicodedata import category
 from django.db import models
 
 
@@ -27,3 +28,20 @@ class User(models.Model):
 
     def __str__(self):
         return self.fname+" - "+self.usertype
+
+class Category(models.Model):
+    category_id = models.IntegerField(primary_key=True)
+    category_name = models.CharField(max_length=100)
+
+class Books(models.Model):
+    bookid = models.AutoField(primary_key=True)
+    book_name = models.CharField(max_length=100)
+    book_image = models.ImageField()
+    book_description = models.TextField()
+    book_price = models.IntegerField()
+    publisher = models.CharField(max_length=100)
+    category = models.ForeignKey(Category,default=1,on_delete=models.CASCADE)
+
+
+
+    

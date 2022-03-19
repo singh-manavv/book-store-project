@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
 
     <!--====== Nice Select CSS ======-->
-    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" >
 
     <!--====== Font Awesome CSS ======-->
     <link rel=" stylesheet" href="{% static 'css/all.min.css' %}">
@@ -28,15 +28,20 @@
     <!--====== Default CSS ======-->
     <link rel="stylesheet" href="{% static 'css/default.css'  %}">
 
+    <link rel="stylesheet" href="{% static 'css/solid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/regular.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+
 
 </head>
 
 <body class="gray-bg">
 
     <!--====== CONTACT PART START ======-->
-    <div class="page_banner bg_cover" style="background-image: url(static/images/page-banner.jpg)">
+    <div class="page_banner bg_cover" style="background-image: {% static 'images/page-banner.jpg' %} ">
         <div class="container">
             <div class="page_banner_content">
                 <h3 class="title">Upload Here </h3>
@@ -56,40 +61,69 @@
                         <div class="contact_title">
                             <h5 class="title">Fill Details Here </h5>
                         </div>
-                        <form id="contact-form" action="{% url 'contact'%}" method="post">
+                        
+                       
+                            {% if msg %}
+                            {{msg}}
+                            {% endif %}
+                            <form action="{% url 'upload_book' %}" method="post">
+                            {% comment %} <form id="contact-form" action="{% url 'managebooks'%}" method="post"> {% endcomment %}
                             {% csrf_token %}
                             <div class="contact_form_wrapper">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="single_form">
-                                            <input type="text" name="name" placeholder=" Book Name">
-                                            <i class="fas fa-user"></i>
+                                            <input type="text" name="book_name" placeholder=" Book Name">
+                                            <i class="fas fa-book"></i>
                                         </div>
                                     </div>
                                     
                                     <div class="col-md-12">
-                                        <div class="single_form">
-                                            <select class="form-control form-control-lg"aria-label="Default select example">
-                                                <option selected>categories</option>
-                                                <option value="1">Novel</option>
+                                        <div class="single_form" >
+                                            <select class="form-control form-control-lg" name="category_id" aria-label="Default select example">
+                                                <option selected>Categories</option>
+                                                {% comment %} <option value="1">Novel</option>
                                                 <option value="2">Sci-Fi.</option>
                                                 <option value="3">Thriller.</option>
                                                 <option value="4">Historical Fiction.</option>
                                                 <option value="5">Physics</option>
-                                                <option value="6">biography</option>
+                                                <option value="6">Biography</option>
+                                                <option value="6">Chemistry</option> {% endcomment %}
+                                                <option value="1">Mathematics</option>
                                               </select>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
+                                        
+                                         <div class="single_form">
+                                            
+                                              <div class="choose_file">
+                                                <span>Choose File</span>
+                                                <input name="Select File" type="file" />
+                                            </div>
+                                        </div> 
+                                        
+                                    </div>
+                                    <div class="col-md-12">
                                         <div class="single_form">
-                                            <label for="formFileDisabled" class="form-label">select book image</label>
-                                            <input class="form-control" type="file"/>
+                                            <textarea name="book_description" placeholder="Description"></textarea>
+                                            <i class="fas fa-edit"></i>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="single_form">
-                                            <textarea name="remarks" placeholder="description"></textarea>
-                                            <i class="fas fa-edit"></i>
+                                            <input type="text" name="publisher" placeholder=" Book Publisher">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="single_form priceclass" >
+                                           
+                                            <img src = "{% static "images/icon/rupeeicon.svg" %} " class="rupeeimageicon" width="12px"></img>
+                                            
+                                            <input type="number" name="book_price" placeholder="Book Price">
+                                            {% comment %} <i class="lni lni-rupee"></i> {% endcomment %}
+                                            
                                         </div>
                                     </div>
                                     <!-- <p class="form-message"></p> -->

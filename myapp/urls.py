@@ -10,4 +10,5 @@ urlpatterns = [
     path('categories/',views.categories,name='categories'),
     path('signout/',views.signout,name='signout'),
     path('upload_book/',views.upload_book,name='upload_book'),
+    path('managebooks/',views.managebooks,name='managebooks'),
 ]

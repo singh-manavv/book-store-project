@@ -1,5 +1,6 @@
 from asyncio.log import logger
 import email
+from unicodedata import name
 from django.forms import PasswordInput
 from django.shortcuts import render
 from .models import *
@@ -97,4 +98,27 @@ def categories(request):
 
 
 def upload_book(request):
-    return render(request,'upload_book.html')
+    if request.method == "POST":
+        Books.objects.create(
+            book_name = request.POST['book_name'],
+            book_image = request.POST['book_image'],
+            category_id = request.POST['category_id'],
+            book_description = request.POST['book_description'],
+            book_price = request.POST['book_price'],
+            publisher = request.POST['publisher']
+        )
+        return render(request,'upload_book.html')
+    else:
+        return render(request,'upload_book.html')
+
+def managebooks(request):
+    try:
+        publishedBooks = Books.objects.all()
+        books = {
+            "allbooks": publishedBooks
+           
+        }
+        
+        return render(request,'managebooks.html', books)
+    except: 
+        return render(request,'managebooks.html')
