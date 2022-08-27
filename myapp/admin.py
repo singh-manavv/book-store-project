@@ -5,5 +5,5 @@ from .models import Contact,User,Books,Category
 admin.site.register(Contact)
 admin.site.register(User)
 admin.site.register(Books)
-print('test')
+
 admin.site.register(Category)
